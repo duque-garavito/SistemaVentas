@@ -1,0 +1,122 @@
+
+:root {
+    --color-primario: #0d6efd;
+    --color-secundario: #6610f2;
+    --color-exito: #198754;
+    --color-peligro: #dc3545;
+    --fondo-claro: #f8f9fa;
+    --texto-claro: #212529;
+    --fondo-oscuro: #212529;
+    --texto-oscuro: #f8f9fa;
+    --sombra: rgba(0, 0, 0, 0.1);
+}
+
+/* Modo claro */
+body {
+    background-color: var(--fondo-claro);
+    color: var(--texto-claro);
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0;
+    padding: 0;
+    transition: all 0.3s ease;
+}
+
+.container {
+    width: 90%;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+h1, h2, h3 {
+    color: var(--color-primario);
+}
+
+a {
+    color: var(--color-primario);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+button, input[type="submit"] {
+    background-color: var(--color-primario);
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    margin-top: 0.5rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover, input[type="submit"]:hover {
+    background-color: var(--color-secundario);
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 0.4rem;
+    margin: 0.3rem 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Tablas */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+}
+
+th, td {
+    border: 1px solid #ccc;
+    padding: 0.6rem;
+    text-align: left;
+}
+
+th {
+    background-color: var(--color-primario);
+    color: white;
+}
+
+/* Modo oscuro */
+body.dark-mode {
+    background-color: var(--fondo-oscuro);
+    color: var(--texto-oscuro);
+}
+
+body.dark-mode h1, 
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode a,
+body.dark-mode th {
+    color: var(--color-exito);
+}
+
+body.dark-mode table {
+    border-color: #444;
+}
+
+body.dark-mode th {
+    background-color: var(--color-secundario);
+}
+
+body.dark-mode td {
+    border-color: #555;
+}
+
+/* Botón toggle modo */
+.toggle-theme {
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    background-color: var(--color-peligro);
+    color: white;
+    padding: 0.4rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 999;
+    box-shadow: 0 2px 5px var(--sombra);
+}
